@@ -72,9 +72,8 @@ export function Navbar() {
           <div className="hidden md:block">
             <Link href="/registration">
               <Button
-                variant="default"
                 size="sm"
-                className="bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-semibold"
               >
                 Tickets
               </Button>
@@ -107,10 +106,9 @@ export function Navbar() {
             <div className="px-4 pt-2">
               <Link href="/registration" className="block w-full">
                 <Button
-                  variant="default"
-                  className="w-full bg-foreground text-background hover:bg-accent"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
                 >
-                  Pricing
+                  Tickets
                 </Button>
               </Link>
             </div>

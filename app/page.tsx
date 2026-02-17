@@ -61,10 +61,10 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero Section with Parallax */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
-        {/* Background Image with Parallax */}
-        <div className="absolute inset-0 -z-20" style={{ backgroundAttachment: 'fixed' }}>
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-20">
           <Image
             src="/images/hero-emergency.jpg"
             alt="Emergency care team"
@@ -72,46 +72,37 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/30 to-accent/30" />
-        </div>
-
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-red-400/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
           <div className="space-y-6">
-            <div className="inline-block px-4 py-2 bg-red-500/30 backdrop-blur text-white rounded-full text-sm font-bold border border-red-400/50">
+            <div className="inline-block px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
               March 20-22, 2025
             </div>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white text-pretty leading-tight drop-shadow-lg">
-              Emergency, Critical Care &
-              <span className="block mt-4 bg-gradient-to-r from-red-300 via-orange-200 to-yellow-200 bg-clip-text text-transparent">
-                Trauma Conference
-              </span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white text-pretty leading-tight">
+              Emergency, Critical Care and Trauma Conference
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto text-pretty leading-relaxed drop-shadow">
-              Connect with leading emergency medicine physicians, trauma surgeons, and critical care specialists. Master life-saving protocols and the latest trauma management innovations.
+            <p className="text-xl text-white/95 max-w-2xl mx-auto text-pretty leading-relaxed font-medium">
+              Connect with leading emergency medicine physicians, trauma surgeons, and critical care specialists. Master life-saving protocols and the latest innovations in emergency care.
             </p>
           </div>
 
           {/* Event Details */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center py-8">
-            <div className="flex items-center gap-3 bg-white/20 backdrop-blur px-6 py-3 rounded-lg border border-white/30 hover:bg-white/30 transition-all">
-              <MapPin size={20} className="text-red-200 flex-shrink-0" />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center py-8">
+            <div className="flex items-center gap-3 bg-white/15 backdrop-blur px-6 py-3 rounded-lg">
+              <MapPin size={20} className="text-accent flex-shrink-0" />
               <div className="text-left">
-                <p className="text-xs text-white/70 uppercase tracking-wide font-semibold">Location</p>
-                <p className="text-white font-bold">New Delhi, India</p>
+                <p className="text-xs text-white/70 uppercase tracking-wide">Location</p>
+                <p className="text-white font-semibold">New Delhi, India</p>
               </div>
             </div>
             <div className="h-px w-12 bg-white/30 hidden sm:block" />
-            <div className="flex items-center gap-3 bg-white/20 backdrop-blur px-6 py-3 rounded-lg border border-white/30 hover:bg-white/30 transition-all">
-              <Calendar size={20} className="text-cyan-200 flex-shrink-0" />
+            <div className="flex items-center gap-3 bg-white/15 backdrop-blur px-6 py-3 rounded-lg">
+              <Calendar size={20} className="text-accent flex-shrink-0" />
               <div className="text-left">
-                <p className="text-xs text-white/70 uppercase tracking-wide font-semibold">Date</p>
-                <p className="text-white font-bold">3 Days</p>
+                <p className="text-xs text-white/70 uppercase tracking-wide">Date</p>
+                <p className="text-white font-semibold">3 Days</p>
               </div>
             </div>
           </div>
@@ -121,7 +112,7 @@ export default function Home() {
             <Link href="/registration">
               <Button
                 size="lg"
-                className="group bg-red-600 text-white hover:bg-red-700 transition-all duration-300 px-8 font-bold shadow-lg hover:shadow-xl"
+                className="group bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 px-8 font-semibold shadow-lg hover:shadow-xl"
               >
                 View Tickets
                 <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -131,33 +122,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Event Section with Parallax */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundAttachment: 'fixed', backgroundImage: 'url(/images/trauma-center.jpg)', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-primary/50 -z-10" />
-        <div className="max-w-6xl mx-auto relative z-10">
+      {/* About Event Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-6">
                 About ECTC 2025
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed font-medium">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 The Emergency, Critical Care and Trauma Conference is the premier gathering for healthcare professionals dedicated to emergency medicine, trauma care, and critical care management.
               </p>
-              <p className="text-lg text-white/90 leading-relaxed font-medium">
-                Join 1,000+ physicians, nurses, paramedics, and medical professionals for intensive learning, advanced simulations, and networking with global experts shaping emergency care.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Join 1,000+ physicians, nurses, paramedics, and medical professionals for intensive learning, advanced simulations, and networking with global experts shaping the future of emergency care.
               </p>
-              <div className="flex gap-4 pt-4">
-                <div className="flex items-center gap-2 text-white">
-                  <Award className="text-yellow-300" size={24} />
-                  <span className="font-bold">World-Class Speakers</span>
+              <div className="flex flex-col gap-3 pt-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Award className="text-primary" size={20} />
+                  </div>
+                  <span className="text-foreground font-semibold">World-Class International Speakers</span>
                 </div>
-                <div className="flex items-center gap-2 text-white">
-                  <Heart className="text-red-300" size={24} />
-                  <span className="font-bold">Practical Training</span>
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Heart className="text-accent" size={20} />
+                  </div>
+                  <span className="text-foreground font-semibold">Hands-on Practical Training</span>
                 </div>
               </div>
             </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl border-4 border-white/20">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/images/conference-speakers.jpg"
                 alt="Medical conference"
@@ -170,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* Conference Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-16 text-center">
             Why Attend ECTC
@@ -178,22 +172,19 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {highlights.map((item, index) => {
               const Icon = item.icon;
-              const colors = ['from-red-500 to-orange-500', 'from-orange-500 to-yellow-500', 'from-cyan-500 to-blue-500'];
+              const accentColors = ['text-primary', 'text-accent', 'text-primary'];
+              const bgColors = ['bg-primary/10', 'bg-accent/10', 'bg-primary/10'];
               return (
                 <Card
                   key={index}
-                  className="group relative bg-white border-0 hover:shadow-xl transition-all duration-300 overflow-hidden p-8"
+                  className="group relative bg-white hover:shadow-lg transition-all duration-300 overflow-hidden p-8 border-0"
                 >
-                  {/* Gradient top accent */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors[index]}`} />
-                  <div className={`absolute inset-0 bg-gradient-to-br ${colors[index]} opacity-0 group-hover:opacity-5 transition-opacity duration-300 -z-10`} />
-
                   <div className="space-y-4">
-                    <div className={`inline-block p-3 bg-gradient-to-br ${colors[index]} rounded-lg group-hover:shadow-lg transition-all duration-300`}>
-                      <Icon size={24} className="text-white" />
+                    <div className={`inline-block p-3 ${bgColors[index]} rounded-lg`}>
+                      <Icon size={24} className={accentColors[index]} />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                    <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
                   </div>
                 </Card>
               );
@@ -203,54 +194,57 @@ export default function Home() {
       </section>
 
       {/* Ticket Categories */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-16 text-center">
             Ticket Categories
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
-            {ticketCategories.map((ticket, index) => (
-              <Card 
-                key={index}
-                className={`relative p-8 flex flex-col ${ticket.highlighted ? 'md:scale-105 border-2 border-red-500 shadow-2xl' : 'border'} overflow-hidden group hover:shadow-xl transition-all duration-300`}
-              >
-                {/* Gradient top accent */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${ticket.color}`} />
-                
-                {ticket.highlighted && <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold rounded-full">POPULAR</div>}
+            {ticketCategories.map((ticket, index) => {
+              const ticketColors = {
+                'Standard Pass': { bg: 'bg-blue-50', border: 'border-blue-200', accent: 'bg-blue-100 text-blue-700' },
+                'Premium Pass': { bg: 'bg-red-50', border: 'border-red-200', accent: 'bg-red-100 text-red-700' },
+                'Professional Pass': { bg: 'bg-purple-50', border: 'border-purple-200', accent: 'bg-purple-100 text-purple-700' },
+              };
+              const colors = ticketColors[ticket.name as keyof typeof ticketColors];
+              return (
+                <Card 
+                  key={index}
+                  className={`relative p-8 flex flex-col border-2 overflow-hidden group hover:shadow-lg transition-all duration-300 ${colors.border} ${colors.bg} ${ticket.highlighted ? 'md:scale-105 ring-2 ring-primary shadow-lg' : ''}`}
+                >
+                  {ticket.highlighted && <div className="absolute top-4 right-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">MOST POPULAR</div>}
 
-                <div className="relative">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">{ticket.name}</h3>
-                  
-                  {/* Price */}
-                  <div className={`mb-8 p-6 bg-gradient-to-r ${ticket.color} rounded-lg text-white`}>
-                    <div className="text-4xl font-bold mb-2">{ticket.price}</div>
-                    <p className="text-sm opacity-90">Per person (3 days)</p>
-                  </div>
+                  <div className="relative">
+                    <h3 className="text-xl font-bold text-foreground mb-4">{ticket.name}</h3>
+                    
+                    {/* Price */}
+                    <div className={`mb-8 p-4 ${colors.accent} rounded-lg`}>
+                      <div className="text-3xl font-bold mb-1">{ticket.price}</div>
+                      <p className="text-sm opacity-90">Per person (3 days)</p>
+                    </div>
 
-                  {/* Features */}
-                  <div className="mb-8 space-y-3 flex-1">
-                    {ticket.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <div className={`mt-1 p-1 bg-gradient-to-r ${ticket.color} rounded-full`}>
-                          <ArrowRight size={14} className="text-white" />
+                    {/* Features */}
+                    <div className="mb-8 space-y-2 flex-1">
+                      {ticket.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <div className="mt-1 text-primary">✓</div>
+                          <p className="text-foreground text-sm">{feature}</p>
                         </div>
-                        <p className="text-foreground text-sm">{feature}</p>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
 
-                  {/* CTA */}
-                  <Link href="/registration" className="block w-full">
-                    <Button className={`w-full font-bold py-6 text-lg transition-all duration-300 bg-gradient-to-r ${ticket.color} text-white hover:shadow-lg`}>
-                      Get Tickets
-                      <ArrowRight size={20} className="ml-2" />
-                    </Button>
-                  </Link>
-                </div>
-              </Card>
-            ))}
+                    {/* CTA */}
+                    <Link href="/registration" className="block w-full">
+                      <Button className={`w-full font-semibold py-5 text-base transition-all duration-300 ${ticket.highlighted ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-foreground text-background hover:bg-foreground/90'}`}>
+                        Get Tickets
+                        <ArrowRight size={18} className="ml-2" />
+                      </Button>
+                    </Link>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-8">
@@ -259,46 +253,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Venue Details Section with Parallax */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundAttachment: 'fixed', backgroundImage: 'url(/images/venue-exterior.jpg)', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-black/40 -z-10" />
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-16 text-center">
+      {/* Venue Details Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-16 text-center">
             Venue Details
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6 text-white">
-              <div>
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <MapPin size={28} className="text-red-400" />
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
+                <h3 className="text-lg font-bold text-foreground mb-3 flex items-center gap-2">
+                  <MapPin size={24} className="text-primary" />
                   Venue Location
                 </h3>
-                <p className="text-lg font-medium">Delhi Convention Center</p>
-                <p className="text-white/80">Pragati Maidan, New Delhi 110001, India</p>
+                <p className="font-semibold text-foreground">Delhi Convention Center</p>
+                <p className="text-muted-foreground text-sm">Pragati Maidan, New Delhi 110001, India</p>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <Calendar size={28} className="text-cyan-400" />
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
+                <h3 className="text-lg font-bold text-foreground mb-3 flex items-center gap-2">
+                  <Calendar size={24} className="text-accent" />
                   Dates & Hours
                 </h3>
-                <p className="text-lg font-medium">March 20-22, 2025</p>
-                <p className="text-white/80">9:00 AM - 6:00 PM (Daily)</p>
+                <p className="font-semibold text-foreground">March 20-22, 2025</p>
+                <p className="text-muted-foreground text-sm">9:00 AM - 6:00 PM (Daily)</p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
-                <h4 className="font-bold mb-3">Facilities Available:</h4>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">✓ State-of-the-art auditoriums</li>
-                  <li className="flex items-center gap-2">✓ Simulation labs & training areas</li>
-                  <li className="flex items-center gap-2">✓ On-site medical facilities</li>
-                  <li className="flex items-center gap-2">✓ Free Wi-Fi & parking</li>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
+                <h4 className="font-bold text-foreground mb-3">Facilities Available:</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> State-of-the-art auditoriums</li>
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Simulation labs & training areas</li>
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> On-site medical facilities</li>
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Free Wi-Fi & parking</li>
                 </ul>
               </div>
             </div>
 
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl border-4 border-white/20">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/images/medical-training.jpg"
                 alt="Medical training setup"
@@ -311,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* Event Highlights Gallery */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-16 text-center">
             Event Highlights
@@ -322,15 +315,15 @@ export default function Home() {
               { src: '/images/trauma-center.jpg', alt: 'Trauma Care', title: 'Trauma Care' },
               { src: '/images/medical-training.jpg', alt: 'Training', title: 'Training' },
             ].map((item, idx) => (
-              <div key={idx} className="group relative h-80 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
+              <div key={idx} className="group relative h-80 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6 group-hover:from-red-600/70 transition-colors duration-300">
-                  <h3 className="text-white text-xl font-bold">{item.title}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                  <h3 className="text-white text-lg font-bold">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -339,37 +332,33 @@ export default function Home() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4 text-center">
             Our Sponsors
           </h2>
-          <p className="text-lg text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
             ECTC 2025 is supported by leading medical technology and healthcare companies committed to advancing emergency care.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sponsors.map((sponsor, idx) => {
-              const colors = {
-                'Platinum': 'from-amber-500 to-yellow-600',
-                'Gold': 'from-orange-400 to-amber-500',
-                'Silver': 'from-gray-400 to-slate-500',
+              const categoryColors = {
+                'Platinum': { bg: 'bg-amber-50', text: 'text-amber-700', badge: 'bg-amber-100 text-amber-800' },
+                'Gold': { bg: 'bg-orange-50', text: 'text-orange-700', badge: 'bg-orange-100 text-orange-800' },
+                'Silver': { bg: 'bg-gray-50', text: 'text-gray-700', badge: 'bg-gray-100 text-gray-800' },
               };
+              const colors = categoryColors[sponsor.category as keyof typeof categoryColors];
               return (
                 <Card
                   key={idx}
-                  className={`p-6 text-center border-0 hover:shadow-lg transition-all group cursor-pointer`}
+                  className={`p-6 text-center border border-border hover:shadow-md transition-all group cursor-pointer ${colors.bg}`}
                 >
-                  <div className={`h-24 bg-gradient-to-br ${colors[sponsor.category as keyof typeof colors] || colors['Silver']} rounded-lg mb-4 flex items-center justify-center group-hover:shadow-lg transition-all`}>
-                    <span className="text-white font-bold text-2xl">{sponsor.name.split(' ')[0]}</span>
+                  <div className={`h-20 rounded-lg mb-4 flex items-center justify-center font-bold text-lg ${colors.text}`}>
+                    {sponsor.name}
                   </div>
-                  <h4 className="font-bold text-foreground mb-2">{sponsor.name}</h4>
-                  <p className={`text-xs font-bold px-3 py-1 rounded-full inline-block ${
-                    sponsor.category === 'Platinum' ? 'bg-amber-100 text-amber-800' :
-                    sponsor.category === 'Gold' ? 'bg-orange-100 text-orange-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
-                    {sponsor.category} Sponsor
+                  <p className={`text-xs font-semibold px-3 py-1 rounded-full inline-block ${colors.badge}`}>
+                    {sponsor.category}
                   </p>
                 </Card>
               );
@@ -377,9 +366,9 @@ export default function Home() {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-muted-foreground mb-4">Interested in sponsoring ECTC 2025?</p>
+            <p className="text-muted-foreground mb-4 text-sm">Interested in sponsoring ECTC 2025?</p>
             <Link href="/contact">
-              <Button className="bg-red-600 text-white hover:bg-red-700 font-bold">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
                 Become a Sponsor
               </Button>
             </Link>
@@ -388,18 +377,18 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-600 via-orange-500 to-red-600">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-5xl sm:text-6xl font-bold tracking-tight text-white">
-            Join the Emergency Care Revolution
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+            Ready to Advance Your Emergency Care Expertise?
           </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto font-medium">
-            Connect with 1,000+ emergency medicine professionals, trauma surgeons, and critical care experts. Reserve your spot at ECTC 2025 today and advance your emergency care expertise.
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            Connect with 1,000+ emergency medicine professionals, trauma surgeons, and critical care experts. Reserve your spot at ECTC 2025 today.
           </p>
           <Link href="/registration">
             <Button
               size="lg"
-              className="group bg-white text-red-600 hover:bg-red-50 font-bold px-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group bg-white text-primary hover:bg-white/90 font-semibold px-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get Your Tickets Now
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
