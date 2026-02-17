@@ -31,10 +31,10 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="text-2xl font-light tracking-wider text-foreground group-hover:text-accent transition-colors duration-300">
-              SUMMIT
+            <div className="text-xl font-semibold tracking-wide text-primary group-hover:text-accent transition-colors duration-300">
+              ECTC
             </div>
-            <div className="text-xs ml-2 text-muted-foreground group-hover:text-muted-foreground transition-colors">2025</div>
+            <div className="text-xs ml-2 text-muted-foreground group-hover:text-accent transition-colors font-medium">2025</div>
           </Link>
 
           {/* Desktop Navigation */}
