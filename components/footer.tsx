@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import {Twitter,Instagram,Facebook,Linkedin} from 'lucide-react';
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -9,9 +9,9 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Summit 2025</h3>
+            <h3 className="font-semibold text-foreground mb-4">Emergency Critical Care and Trauma Conference (ECTC)</h3>
             <p className="text-sm text-muted-foreground">
-              A premier conference bringing together industry leaders and innovators.
+              A medical conference focused on emergency medicine, critical care, and trauma management.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/registration" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Pricing
+                  Registration
                 </Link>
               </li>
             </ul>
@@ -46,9 +46,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Email: info@summit2025.com</li>
-              <li>Phone: +91 (800) 123-4567</li>
-              <li>Location: New Delhi, India</li>
+              <li>Email: info@ectc2026.org</li>
+              <li>Phone: +977-1-555-0123</li>
+              <li>Location: Kathmandu, Nepal</li>
             </ul>
           </div>
 
@@ -57,13 +57,16 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                Twitter
+                <Twitter className="w-4 h-4" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                LinkedIn
+                <Linkedin className="w-4 h-4" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                Instagram
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Facebook className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -73,7 +76,7 @@ export function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              &copy; {currentYear} Summit 2025. All rights reserved.
+              &copy; {currentYear} ECTC 2026. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground">
               Designed & Developed by{' '}

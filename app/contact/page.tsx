@@ -9,23 +9,23 @@ export default function Contact() {
   const contactMethods = [
     {
       icon: Mail,
-      title: 'Email Us',
-      description: 'For general inquiries and support',
-      value: 'hello@summit2025.com',
-      link: 'mailto:hello@summit2025.com',
+      title: 'Email Support',
+      description: 'For registration and conference support',
+      value: 'info@ectc2026.org',
+      link: 'mailto:info@ectc2026.org',
     },
     {
       icon: Phone,
-      title: 'Call Us',
-      description: 'Our team is available 9 AM - 5 PM EST',
-      value: '+1 (212) 555-0123',
-      link: 'tel:+1-212-555-0123',
+      title: 'Call Coordination',
+      description: 'Our team is available 9 AM - 5 PM NPT',
+      value: '+977-1-555-0123',
+      link: 'tel:+977-1-555-0123',
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      description: 'Summit headquarters in New York',
-      value: '123 Main Street, NYC 10001',
+      title: 'Conference Venue',
+      description: 'ECTC organizing office in Kathmandu',
+      value: 'Bhrikutimandap, Kathmandu 44600',
       link: 'https://maps.google.com',
     },
   ];
@@ -36,19 +36,29 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section className="relative min-h-96 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-r from-secondary/50 to-background">
-        <div className="absolute inset-0 -z-10">
+        {/* <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/3 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-        </div>
+        </div> */}
+         <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/contact.jpg"
+                    alt="Emergency care conference venue"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  {/* <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" /> */}
+                </div>
 
-        <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+        {/* <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
           <h1 className="text-6xl sm:text-7xl font-light tracking-tight text-foreground">
-            Get In Touch
+            Contact ECTC 2026
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have questions? Our team is here to help. Contact us anytime.
+            Have questions about registration, sessions, or logistics? Our team is here to help.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* Contact Methods */}
@@ -61,8 +71,8 @@ export default function Contact() {
                 <a
                   key={index}
                   href={method.link}
-                  target={method.title === 'Visit Us' ? '_blank' : undefined}
-                  rel={method.title === 'Visit Us' ? 'noopener noreferrer' : undefined}
+                  target={method.title === 'Conference Venue' ? '_blank' : undefined}
+                  rel={method.title === 'Conference Venue' ? 'noopener noreferrer' : undefined}
                   className="group"
                 >
                   <Card className="bg-card border border-primary/20 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 p-8 h-full flex flex-col items-center text-center">
@@ -90,16 +100,16 @@ export default function Contact() {
             <div>
               <h4 className="text-lg font-medium text-foreground mb-3">Operating Hours</h4>
               <p className="text-muted-foreground mb-4">
-                Our team is available to answer your questions during business hours:
+                Our support desk is available during these hours:
               </p>
               <div className="grid sm:grid-cols-2 gap-4 text-sm">
                 <div>
                   <p className="text-foreground font-medium">Monday - Friday</p>
-                  <p className="text-muted-foreground">9:00 AM - 5:00 PM EST</p>
+                  <p className="text-muted-foreground">9:00 AM - 5:00 PM NPT</p>
                 </div>
                 <div>
                   <p className="text-foreground font-medium">Saturday - Sunday</p>
-                  <p className="text-muted-foreground">10:00 AM - 3:00 PM EST</p>
+                  <p className="text-muted-foreground">10:00 AM - 3:00 PM NPT</p>
                 </div>
               </div>
             </div>
@@ -111,7 +121,7 @@ export default function Contact() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-foreground mb-8 text-center">
-            Send us a Message
+            Send a Message
           </h2>
 
           <Card className="bg-card/50 border-border p-8">
@@ -123,7 +133,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    placeholder="John"
+                    placeholder="Aarav"
                     className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                   />
                 </div>
@@ -133,7 +143,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    placeholder="Doe"
+                    placeholder="Sharma"
                     className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                   />
                 </div>
@@ -145,7 +155,7 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="doctor@example.com"
                   className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                 />
               </div>
@@ -156,7 +166,7 @@ export default function Contact() {
                 </label>
                 <input
                   type="text"
-                  placeholder="How can we help?"
+                  placeholder="Registration assistance"
                   className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                 />
               </div>
@@ -166,7 +176,7 @@ export default function Contact() {
                   Message
                 </label>
                 <textarea
-                  placeholder="Tell us more about your inquiry..."
+                  placeholder="Tell us about your question regarding ECTC 2026..."
                   rows={6}
                   className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all resize-none"
                 />
@@ -176,12 +186,12 @@ export default function Contact() {
               size="lg"
               className="group bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 px-8 font-medium shadow-md hover:shadow-lg"
             >
-              View Pricing
+              View Registration Fees
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
 
               <p className="text-center text-xs text-muted-foreground">
-                We typically respond to all inquiries within 24 hours.
+                We typically respond to all conference inquiries within 24 hours.
               </p>
             </form>
           </Card>
@@ -192,11 +202,11 @@ export default function Contact() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-foreground mb-8 text-center">
-            Find Us
+            Venue Location
           </h2>
           <div className="h-96 bg-muted rounded-lg border border-border overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00601562346047!3d40.71282314279166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3855555%3A0xce36da7f474e2e5!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1"
+              src="https://www.google.com/maps?q=Kathmandu,+Nepal&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -219,23 +229,23 @@ export default function Contact() {
             {[
               {
                 q: 'How do I contact support for ticket issues?',
-                a: 'Email us at hello@summit2025.com with your ticket number or call +1 (212) 555-0123 during business hours.',
+                a: 'Email us at info@ectc2026.org with your registration ID or call +977-1-555-0123 during support hours.',
               },
               {
                 q: 'What is the refund policy?',
-                a: 'Refunds are available up to 14 days before the event. Tickets are non-refundable after that date but can be transferred to another person.',
+                a: 'Refunds are available up to 14 days before the conference. After that, registrations are non-refundable but transferable.',
               },
               {
                 q: 'Can I change my registration information?',
-                a: 'Yes, you can update your information up to 7 days before the event. Contact our support team for assistance.',
+                a: 'Yes, you can update your registration details up to 7 days before the conference. Contact support for assistance.',
               },
               {
                 q: 'Is there parking available at the venue?',
-                a: 'Yes, there is ample parking available at The Grand Convention Center. Download our venue information guide for details.',
+                a: 'Yes, parking is available at the venue. Refer to the venue information guide for access details.',
               },
               {
                 q: 'How do I arrange accommodation?',
-                a: 'Visit our Accommodation page for information about nearby hotels with special Summit 2025 rates.',
+                a: 'Recommended nearby hotels will be shared with registered attendees before ECTC 2026.',
               },
             ].map((faq, idx) => (
               <Card key={idx} className="bg-card/50 border-border p-6">
@@ -254,8 +264,8 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <h4 className="text-foreground font-medium mb-4">SUMMIT</h4>
-              <p className="text-muted-foreground text-sm">The world's premier conference experience.</p>
+              <h4 className="text-foreground font-medium mb-4">ECTC 2026</h4>
+              <p className="text-muted-foreground text-sm">Emergency Critical Care and Trauma Conference.</p>
             </div>
             <div>
               <h4 className="text-foreground font-medium mb-4">Navigation</h4>
@@ -282,7 +292,7 @@ export default function Contact() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Help Center
+                    Contact Desk
                   </Link>
                 </li>
                 <li>
@@ -309,7 +319,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-muted-foreground text-sm">
-            <p>&copy; 2025 Summit. All rights reserved. Crafted with precision and care.</p>
+            <p>&copy; 2026 ECTC. All rights reserved. Built for Emergency Critical Care and Trauma Conference.</p>
           </div>
         </div>
       </footer>

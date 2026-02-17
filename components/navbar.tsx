@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -21,7 +22,7 @@ export function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/events', label: 'Events' },
-    { href: '/registration', label: 'Pricing' },
+    { href: '/registration', label: 'Registration' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -31,10 +32,18 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/Icon.png"
+              alt="ECTC icon"
+              width={28}
+              height={28}
+              className="rounded-sm mr-2 background-transparent"
+              priority
+            />
             <div className="text-2xl font-light tracking-wider text-foreground group-hover:text-accent transition-colors duration-300">
-              SUMMIT
+              ECTC
             </div>
-            <div className="text-xs ml-2 text-muted-foreground group-hover:text-muted-foreground transition-colors">2025</div>
+            <div className="text-xs ml-2 text-muted-foreground group-hover:text-muted-foreground transition-colors">2026</div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -60,7 +69,7 @@ export function Navbar() {
                 size="sm"
                 className="bg-foreground text-background hover:bg-accent hover:text-foreground transition-all duration-300"
               >
-                Pricing
+                Registration
               </Button>
             </Link>
           </div>
@@ -94,7 +103,7 @@ export function Navbar() {
                   variant="default"
                   className="w-full bg-foreground text-background hover:bg-accent"
                 >
-                  Pricing
+                  Registration
                 </Button>
               </Link>
             </div>

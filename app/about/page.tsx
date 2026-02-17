@@ -9,37 +9,37 @@ export default function About() {
   const objectives = [
     {
       icon: Target,
-      title: 'Inspire Innovation',
-      description: 'Foster groundbreaking ideas and pioneering solutions that shape the future of our industry.',
+      title: 'Strengthen Clinical Practice',
+      description: 'Share evidence-based emergency and trauma care approaches that improve outcomes at the bedside.',
     },
     {
       icon: Users,
-      title: 'Build Communities',
-      description: 'Create meaningful connections between professionals, leaders, and visionaries worldwide.',
+      title: 'Build Care Networks',
+      description: 'Create meaningful collaboration between physicians, nurses, trauma teams, and allied health staff.',
     },
     {
       icon: CheckCircle2,
-      title: 'Deliver Excellence',
-      description: 'Provide world-class content and experiences that exceed expectations and drive growth.',
+      title: 'Advance Patient Safety',
+      description: 'Deliver practical learning that supports safer emergency response and critical care delivery.',
     },
   ];
 
   const audiences = [
     {
-      title: 'C-Suite Executives',
-      description: 'Strategic leaders and decision-makers seeking industry insights and networking opportunities.',
+      title: 'Emergency Physicians',
+      description: 'Clinicians seeking advanced updates in emergency medicine, resuscitation, and trauma response.',
     },
     {
-      title: 'Innovators & Entrepreneurs',
-      description: 'Visionary thinkers and startup founders looking to scale and collaborate.',
+      title: 'Critical Care Teams',
+      description: 'ICU consultants and multidisciplinary teams focused on severe illness and high-acuity care.',
     },
     {
-      title: 'Technical Professionals',
-      description: 'Engineers, architects, and technical experts eager to advance their expertise.',
+      title: 'Nurses & Paramedics',
+      description: 'Frontline professionals building practical skills for emergency stabilization and transfer care.',
     },
     {
-      title: 'Industry Experts',
-      description: 'Thought leaders and specialists passionate about sharing knowledge and insights.',
+      title: 'Residents & Students',
+      description: 'Trainees and early-career healthcare professionals developing core emergency care competency.',
     },
   ];
 
@@ -54,13 +54,22 @@ export default function About() {
           <div className="absolute top-1/3 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
         </div>
-
+        <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/images/About.jpg"
+                    alt="Emergency care conference venue"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  {/* <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" /> */}
+                </div>
         <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
           <h1 className="text-6xl sm:text-7xl font-light tracking-tight text-foreground">
-            About Summit 2025
+            About ECTC 2026
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Transforming industries through connection, innovation, and shared vision
+            Advancing emergency medicine, critical care, and trauma management through shared clinical learning
           </p>
         </div>
       </section>
@@ -73,13 +82,13 @@ export default function About() {
           </h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p className="text-foreground">
-              Summit 2025 represents a pivotal gathering of thought leaders, innovators, and industry professionals. With over 500 attendees expected from across the globe, this two-day conference brings together the brightest minds to explore emerging trends, share breakthrough insights, and forge meaningful connections.
+              Emergency Critical Care and Trauma Conference 2026 is a focused gathering of physicians, nurses, trauma specialists, and healthcare educators. The conference brings frontline teams together to review current evidence, refine practical skills, and strengthen coordinated emergency response.
             </p>
             <p className="text-muted-foreground">
-              Each carefully curated session is designed to provide actionable insights and strategic perspectives that will elevate your career and organization. From keynote addresses by industry luminaries to intimate breakout workshops, Summit 2025 offers a premium experience designed for those who demand excellence.
+              Each session is designed to deliver clinically relevant insights that can be applied immediately in emergency departments, ICUs, and trauma units. From expert-led keynote talks to case-based workshops, ECTC 2026 supports high-impact learning for real-world patient care.
             </p>
             <p className="text-muted-foreground">
-              Whether you're seeking to expand your professional network, stay ahead of industry developments, or discover transformative opportunities, Summit 2025 delivers an unparalleled platform for growth and collaboration.
+              Whether you want to update protocols, improve team decision-making, or connect with peers across specialties, ECTC 2026 provides a practical platform for collaboration and professional growth.
             </p>
           </div>
         </div>
@@ -146,30 +155,30 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-light text-foreground mb-4">Premium Content</h3>
+                <h3 className="text-2xl font-light text-foreground mb-4">Evidence-Based Sessions</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Keynote addresses from industry leaders, interactive workshops, and panel discussions featuring the most innovative minds in the field.
+                  Keynote addresses from experienced clinicians, practical workshops, and panel discussions on emergency and trauma care.
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-foreground mb-4">Networking Opportunities</h3>
+                <h3 className="text-2xl font-light text-foreground mb-4">Interdisciplinary Networking</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Exclusive networking events, roundtable discussions, and social gatherings designed to facilitate meaningful connections.
+                  Clinical roundtables and networking sessions designed to connect healthcare teams across emergency and critical care services.
                 </p>
               </div>
             </div>
 
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-light text-foreground mb-4">World-Class Venue</h3>
+                <h3 className="text-2xl font-light text-foreground mb-4">Simulation-Focused Training</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  State-of-the-art facilities in the heart of New York City, featuring modern amenities and seamless connectivity.
+                  Hands-on learning environments with scenario-based trauma and critical care training for frontline teams.
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-foreground mb-4">Professional Development</h3>
+                <h3 className="text-2xl font-light text-foreground mb-4">Clinical Professional Development</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Gain actionable insights, discover emerging trends, and acquire knowledge that will elevate your career and organization.
+                  Gain actionable knowledge, review current guidelines, and build competencies that improve patient care quality.
                 </p>
               </div>
             </div>
@@ -205,17 +214,17 @@ export default function About() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-5xl sm:text-6xl font-light tracking-tight text-foreground">
-            Ready to Join Us?
+            Ready for ECTC 2026?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Learn more about our event and check out ticket pricing options on our registration page.
+            Review registration options and secure your place in this emergency and trauma care learning experience.
           </p>
           <Link href="/registration">
             <Button
               size="lg"
               className="group bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 px-8 font-medium shadow-md hover:shadow-lg"
             >
-              View Pricing
+              View Registration Fees
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
