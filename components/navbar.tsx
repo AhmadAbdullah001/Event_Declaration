@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Navbar() {
@@ -31,8 +31,8 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="text-2xl font-light tracking-wider text-foreground group-hover:text-accent transition-colors duration-300">
-              SUMMIT
+            <div className="text-lg font-bold tracking-wider text-foreground group-hover:text-accent transition-colors duration-300">
+              ECTC
             </div>
             <div className="text-xs ml-2 text-muted-foreground group-hover:text-muted-foreground transition-colors">2025</div>
           </Link>
@@ -52,15 +52,31 @@ export function Navbar() {
             ))}
           </div>
 
+          {/* Social Icons */}
+          <div className="hidden lg:flex items-center gap-4 mx-4 border-l border-r border-border px-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+              <Facebook size={18} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+              <Linkedin size={18} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+              <Twitter size={18} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+              <Instagram size={18} />
+            </a>
+          </div>
+
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="/registration">
               <Button
                 variant="default"
                 size="sm"
-                className="bg-foreground text-background hover:bg-accent hover:text-foreground transition-all duration-300"
+                className="bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
-                Pricing
+                Tickets
               </Button>
             </Link>
           </div>

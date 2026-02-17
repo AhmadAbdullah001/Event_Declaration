@@ -9,8 +9,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Summit 2025 - Premium Event Experience',
-  description: 'Join us for an extraordinary conference bringing together industry leaders, innovators, and visionaries.',
+  title: 'ECTC 2025 - Emergency, Critical Care and Trauma Conference',
+  description: 'Join leading medical professionals and emergency care experts at the Emergency, Critical Care and Trauma Conference. Learn cutting-edge trauma management, critical care protocols, and emergency medicine innovations.',
   generator: 'v0.app',
   icons: {
     icon: [
