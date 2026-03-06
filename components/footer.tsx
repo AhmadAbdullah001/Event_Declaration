@@ -78,12 +78,6 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               &copy; {currentYear} ECTC 2026. All rights reserved.
             </p>
-            <p className="text-sm text-muted-foreground">
-              Designed & Developed by{' '}
-              <a href="https://www.linkedin.com/in/ahmad-abdullah-hashmi-802a372a9/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:text-primary/80 transition-colors">
-                Abdullah
-              </a>
-            </p>
           </div>
         </div>
       </div>
