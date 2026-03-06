@@ -31,7 +31,7 @@ export default function Home() {
       label: 'Doctor Pass',
       title: 'ECTC 2026 Doctor',
       description: 'For emergency physicians, intensivists, and trauma consultants',
-      price: '$599',
+      price: '$299',
       note: 'Per attendee (March 24-27, 2026)',
       features: [
         'Full access to all clinical sessions',
@@ -45,7 +45,7 @@ export default function Home() {
       label: 'Nurse Pass',
       title: 'ECTC 2026 Nurse',
       description: 'For emergency, ICU, trauma, and critical care nursing professionals',
-      price: '$399',
+      price: '$199',
       note: 'Per attendee (March 24-27, 2026)',
       features: [
         'Full access to nursing-relevant sessions',
@@ -59,7 +59,7 @@ export default function Home() {
       label: 'Resident/Student Pass',
       title: 'ECTC 2026 Resident',
       description: 'For residents, fellows, interns, and medical/nursing students',
-      price: '$249',
+      price: '$149',
       note: 'Per attendee (March 24-27, 2026)',
       features: [
         'Full access to all core sessions',
