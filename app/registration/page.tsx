@@ -136,9 +136,6 @@ export default function Registration() {
 
                 {/* CTA - Pricing Display Only */}
                 <div className="space-y-3 mt-auto">
-                  <p className="text-center text-sm text-muted-foreground">
-                    Early registration available until February 28, 2026
-                  </p>
                   <p className="text-center text-sm font-medium text-foreground/70">
                     {ticket.cta}
                   </p>

@@ -266,9 +266,6 @@ export default function Home() {
               </Card>
             ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-8">
-            Early registration available until February 28, 2026
-          </p>
         </div>
       </section>
 
