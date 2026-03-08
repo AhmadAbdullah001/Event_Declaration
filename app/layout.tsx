@@ -47,6 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="google-site-verification" content="eksECV2rCG_vHoEHk8-ktfshjNcyPsIPvJzIOUt9DA0" />
       <body className="font-sans antialiased bg-background text-foreground flex flex-col min-h-screen">
         <div className="flex-1">
           {children}
